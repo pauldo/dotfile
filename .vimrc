@@ -56,6 +56,7 @@ filetype plugin indent on    " required
 syntax enable
 colorscheme molokai
 let g:molokai_original = 1
+let g:rehash256 = 1
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 
 "设置行号
@@ -206,8 +207,8 @@ let g:persistentBehaviour=0
 
 
 "对搜索的设置
-map ft :call Search_Word()<CR>:copen<CR>
-function Search_Word()
-let w = expand("<cword>") " 在当前光标位置抓词
-execute "vimgrep " . w . " *"
-endfunction
+" map ft :call Search_Word()<CR>:copen<CR>
+" function Search_Word()
+" let w = expand("<cword>") " 在当前光标位置抓词
+" execute "vimgrep " . w . " *"
+" endfunction
