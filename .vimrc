@@ -33,6 +33,7 @@ filetype plugin indent on    " required
 
 " list snippets
 let g:UltiSnipsListSnippets="<c-l>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/paulssnippets']
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
