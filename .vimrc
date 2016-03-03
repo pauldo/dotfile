@@ -14,7 +14,8 @@ Plugin 'SirVer/ultisnips'       " c-j & c-k
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'        " c-y,
 Plugin 'kien/ctrlp.vim'         " c-p
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
