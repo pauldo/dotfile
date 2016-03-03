@@ -51,3 +51,4 @@ set sw=4
 set expandtab
 set tabstop=4
 set cursorline
+set smartcase   " or set ignorecase
