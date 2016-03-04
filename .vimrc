@@ -16,6 +16,7 @@ Plugin 'mattn/emmet-vim'        " c-y,
 Plugin 'kien/ctrlp.vim'         " c-p
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +44,12 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 set laststatus=2
 let g:airline_theme = "hybridline"
 
+" ctrlspace
+let g:CtrlSpaceSearchTiming = 500
+if executable("ag")
+    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
+
 " custom
 syntax enable
 set nu
@@ -52,3 +59,5 @@ set expandtab
 set tabstop=4
 set cursorline
 set smartcase   " or set ignorecase
+set hidden
+
