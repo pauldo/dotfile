@@ -16,7 +16,9 @@ Plugin 'mattn/emmet-vim'        " c-y,
 Plugin 'kien/ctrlp.vim'         " c-p
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-ctrlspace/vim-ctrlspace'
+" Plugin 'vim-ctrlspace/vim-ctrlspace'
+Plugin 'rking/ag.vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,4 +62,5 @@ set tabstop=4
 set cursorline
 set smartcase   " or set ignorecase
 set hidden
+set showtabline=0
 
