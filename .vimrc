@@ -16,9 +16,9 @@ Plugin 'mattn/emmet-vim'        " c-y,
 Plugin 'kien/ctrlp.vim'         " c-p
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'vim-ctrlspace/vim-ctrlspace'
-Plugin 'rking/ag.vim'
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'rking/ag.vim'           " :Ag
+Plugin 'terryma/vim-multiple-cursors' " c-n c-p c-x
+Plugin 'Lokaltog/vim-powerline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,13 +46,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 set laststatus=2
 let g:airline_theme = "hybridline"
 
-" ctrlspace
-let g:CtrlSpaceSearchTiming = 500
-if executable("ag")
-    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-endif
-
 " custom
+let mapleader = ","
 syntax enable
 set nu
 set ts=4
@@ -64,3 +59,7 @@ set smartcase   " or set ignorecase
 set hidden
 set showtabline=0
 
+:nnoremap <unique> tn :tabnew .<cr>
+:nnoremap <unique> te :tabedit 
+:nnoremap <unique> to :tabonly<cr>
+:map <leader>q :Ag <cword><cr>
