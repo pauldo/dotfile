@@ -1,0 +1,24 @@
+snippet worker
+worker_processes 1;
+error_log logs/error.log;
+events {
+    worker_connections ${1:1024};
+}
+
+${0}
+endsnippet
+
+snippet http
+http {
+    server {
+        listen ${1:8089};
+        # lua_code_cache off;
+    }
+}
+endsnippet
+
+snippet location
+        location ${1:~ ^/api/([-_a-zA-z0-9/]+)} {
+            content_by_lua_file app/api.lua;
+        }
+endsnippet
